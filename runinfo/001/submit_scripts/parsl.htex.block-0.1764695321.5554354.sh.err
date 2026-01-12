@@ -1,0 +1,2 @@
+/home/users/jtm1171/.conda/envs/qiime2-amplicon-2024.5/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 7 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

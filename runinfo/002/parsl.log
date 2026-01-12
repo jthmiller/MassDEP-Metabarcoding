@@ -1,0 +1,390 @@
+1768251601.340564 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:91 __init__ INFO: Starting DataFlowKernel with config
+Config(
+    app_cache=True, 
+    checkpoint_files=None, 
+    checkpoint_mode=None, 
+    checkpoint_period=None, 
+    executors=(ThreadPoolExecutor(
+        label='default', 
+        max_threads=255, 
+        storage_access=None, 
+        thread_name_prefix='', 
+        working_dir=None
+    ), HighThroughputExecutor(
+        address=None, 
+        address_probe_timeout=None, 
+        available_accelerators=[], 
+        block_error_handler=<function simple_error_handler at 0x7f537aca3790>, 
+        cores_per_worker=1.0, 
+        cpu_affinity='none', 
+        drain_period=None, 
+        enable_mpi_mode=False, 
+        encrypted=False, 
+        heartbeat_period=30, 
+        heartbeat_threshold=120, 
+        interchange_port_range=(55000, 56000), 
+        label='htex', 
+        launch_cmd='process_worker_pool.py {debug} {max_workers_per_node} -a {addresses} -p {prefetch_capacity} -c {cores_per_worker} -m {mem_per_worker} --poll {poll_period} --task_port={task_port} --result_port={result_port} --cert_dir {cert_dir} --logdir={logdir} --block_id={{block_id}} --hb_period={heartbeat_period} {address_probe_timeout_string} --hb_threshold={heartbeat_threshold} --drain_period={drain_period} --cpu-affinity {cpu_affinity} {enable_mpi_mode} --mpi-launcher={mpi_launcher} --available-accelerators {accelerators}', 
+        max_workers=255, 
+        max_workers_per_node=255, 
+        mem_per_worker=None, 
+        mpi_launcher='mpiexec', 
+        poll_period=10, 
+        prefetch_capacity=0, 
+        provider=LocalProvider(
+            channel=LocalChannel(envs={}, script_dir=None, userhome='/home/users/jtm1171/algae'), 
+            cmd_timeout=30, 
+            init_blocks=1, 
+            launcher=SingleNodeLauncher(debug=True, fail_on_any=False), 
+            max_blocks=1, 
+            min_blocks=0, 
+            move_files=None, 
+            nodes_per_block=1, 
+            parallelism=1, 
+            worker_init=''
+        ), 
+        storage_access=None, 
+        worker_debug=False, 
+        worker_logdir_root=None, 
+        worker_port_range=(54000, 55000), 
+        worker_ports=None, 
+        working_dir=None
+    )), 
+    garbage_collect=True, 
+    initialize_logging=True, 
+    internal_tasks_max_threads=10, 
+    max_idletime=120.0, 
+    monitoring=None, 
+    retries=0, 
+    retry_handler=None, 
+    run_dir='runinfo', 
+    strategy='none', 
+    strategy_period=5, 
+    usage_tracking=False
+)
+1768251601.340734 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:93 __init__ INFO: Parsl version: 2024.04.15
+1768251601.340826 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.usage_tracking.usage:111 __init__ DEBUG: Tracking status: False
+1768251601.340921 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:121 __init__ INFO: Run id is: cfe203b1-2c11-4c8b-8c64-df7fb21da5a0
+1768251601.670915 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:128 __init__ DEBUG: Considering candidate for workflow name: /home/users/jtm1171/.conda/envs/qiime2-amplicon-2024.5/lib/python3.9/site-packages/parsl/dataflow/dflow.py
+1768251601.671045 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:128 __init__ DEBUG: Considering candidate for workflow name: /home/users/jtm1171/.conda/envs/qiime2-amplicon-2024.5/lib/python3.9/site-packages/parsl/dataflow/dflow.py
+1768251601.671077 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:128 __init__ DEBUG: Considering candidate for workflow name: /home/users/jtm1171/.conda/envs/qiime2-amplicon-2024.5/lib/python3.9/site-packages/qiime2/sdk/parallel_config.py
+1768251601.671103 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:134 __init__ DEBUG: Using parallel_config.py as workflow name
+1768251601.671244 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.memoization:163 __init__ INFO: App caching initialized
+1768251601.671315 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.jobs.strategy:145 __init__ DEBUG: Scaling strategy: none
+1768251601.673512 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.executor:567 _start_queue_management_thread DEBUG: Starting queue management thread
+1768251601.673879 2026-01-12 16:00:01 MainProcess-3062731 HTEX-Queue-Management-Thread-139997277582912 parsl.executors.high_throughput.executor:456 _queue_management_worker DEBUG: Queue management worker starting
+1768251601.674015 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.executor:571 _start_queue_management_thread DEBUG: Started queue management thread
+1768251601.674102 2026-01-12 16:00:01 MainProcess-3062731 HTEX-Queue-Management-Thread-139997277582912 parsl.executors.high_throughput.zmq_pipes:162 get DEBUG: Waiting for ResultsIncoming message
+1768251601.718391 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.executor:430 start DEBUG: Created management thread: <Thread(HTEX-Queue-Management-Thread, started daemon 139997277582912)>
+1768251601.718756 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.executor:399 initialize_scaling DEBUG: Launch command: process_worker_pool.py  --max_workers_per_node=255 -a 132.177.250.79,127.0.0.1 -p 0 -c 1.0 -m None --poll 10 --task_port=54798 --result_port=54572 --cert_dir None --logdir=/home/users/jtm1171/algae/runinfo/002/htex --block_id={block_id} --hb_period=30  --hb_threshold=120 --drain_period=None --cpu-affinity none  --mpi-launcher=mpiexec --available-accelerators 
+1768251601.718801 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.executor:401 initialize_scaling DEBUG: Starting HighThroughputExecutor with provider:
+LocalProvider(
+    channel=LocalChannel(
+        envs={}, 
+        script_dir='/home/users/jtm1171/algae/runinfo/002/submit_scripts', 
+        userhome='/home/users/jtm1171/algae'
+    ), 
+    cmd_timeout=30, 
+    init_blocks=1, 
+    launcher=SingleNodeLauncher(debug=True, fail_on_any=False), 
+    max_blocks=1, 
+    min_blocks=0, 
+    move_files=None, 
+    nodes_per_block=1, 
+    parallelism=1, 
+    worker_init=''
+)
+1768251601.720282 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.jobs.job_status_poller:40 add_executors DEBUG: Adding executor htex
+1768251601.723503 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:971 submit DEBUG: Task 0 will be sent to executor _parsl_internal
+1768251601.723681 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:786 _add_output_deps DEBUG: Adding output dependencies
+1768251601.723733 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1053 submit INFO: Task 0 submitted for App _run_parsl_action, not waiting on any dependency
+1768251601.723795 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1059 submit DEBUG: Task 0 set to pending state with AppFuture: <AppFuture at 0x7f53ac6be910 state=pending>
+1768251601.723853 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.memoization:222 check_memo DEBUG: Task 0 will not be memoized
+1768251601.725784 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:748 launch_task INFO: Parsl task 0 try 0 launched on executor _parsl_internal
+1768251601.726120 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard out for task 0 will not be redirected.
+1768251601.726168 2026-01-12 16:00:01 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard error for task 0 will not be redirected.
+1768251601.746377 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:971 submit DEBUG: Task 1 will be sent to executor default
+1768251601.746521 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:786 _add_output_deps DEBUG: Adding output dependencies
+1768251601.746564 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1053 submit INFO: Task 1 submitted for App _run_parsl_action, not waiting on any dependency
+1768251601.746604 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1059 submit DEBUG: Task 1 set to pending state with AppFuture: <AppFuture at 0x7f53ac6d7d00 state=pending>
+1768251601.746641 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.memoization:222 check_memo DEBUG: Task 1 will not be memoized
+1768251601.747531 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:748 launch_task INFO: Parsl task 1 try 0 launched on executor default
+1768251601.747679 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard out for task 1 will not be redirected.
+1768251601.747715 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard error for task 1 will not be redirected.
+1768251601.748113 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:971 submit DEBUG: Task 2 will be sent to executor default
+1768251601.748262 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:786 _add_output_deps DEBUG: Adding output dependencies
+1768251601.748331 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1053 submit INFO: Task 2 submitted for App _run_parsl_action, waiting on task 1
+1768251601.748641 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1059 submit DEBUG: Task 2 set to pending state with AppFuture: <AppFuture at 0x7f53ac6e9850 state=pending>
+1768251601.748714 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:636 launch_if_ready DEBUG: Task 2 has outstanding dependencies, so launch_if_ready skipping
+1768251601.749041 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:971 submit DEBUG: Task 3 will be sent to executor default
+1768251601.749099 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:786 _add_output_deps DEBUG: Adding output dependencies
+1768251601.749135 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1053 submit INFO: Task 3 submitted for App _run_parsl_action, waiting on task 2
+1768251601.749213 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1059 submit DEBUG: Task 3 set to pending state with AppFuture: <AppFuture at 0x7f53ac6e92b0 state=pending>
+1768251601.749249 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:636 launch_if_ready DEBUG: Task 3 has outstanding dependencies, so launch_if_ready skipping
+1768251601.749544 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:971 submit DEBUG: Task 4 will be sent to executor default
+1768251601.749634 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:786 _add_output_deps DEBUG: Adding output dependencies
+1768251601.749677 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1053 submit INFO: Task 4 submitted for App _run_parsl_action, waiting on task 3
+1768251601.749713 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1059 submit DEBUG: Task 4 set to pending state with AppFuture: <AppFuture at 0x7f53ac6e9a30 state=pending>
+1768251601.749758 2026-01-12 16:00:01 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:636 launch_if_ready DEBUG: Task 4 has outstanding dependencies, so launch_if_ready skipping
+1768251606.671964 2026-01-12 16:00:06 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251606.672351 2026-01-12 16:00:06 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251606.672831 2026-01-12 16:00:06 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251606.672909 2026-01-12 16:00:06 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:156 _strategy_init_only DEBUG: strategy_init_only: scaling out 1 initial blocks for htex
+1768251606.672968 2026-01-12 16:00:06 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.status_handling:191 scale_out INFO: Scaling out by 1 blocks
+1768251606.673016 2026-01-12 16:00:06 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.status_handling:194 scale_out INFO: Allocated block ID 0
+1768251606.673059 2026-01-12 16:00:06 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.status_handling:217 _launch_block DEBUG: Submitting to provider with job_name parsl.htex.block-0
+1768251606.673850 2026-01-12 16:00:06 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.providers.local.local:219 submit DEBUG: Launching
+1768251606.702906 2026-01-12 16:00:06 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.status_handling:220 _launch_block DEBUG: Launched block 0 on executor htex with job ID 3063263
+1768251611.928174 2026-01-12 16:00:11 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251611.928532 2026-01-12 16:00:11 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251611.929112 2026-01-12 16:00:11 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251611.929247 2026-01-12 16:00:11 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251617.159524 2026-01-12 16:00:17 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251617.160109 2026-01-12 16:00:17 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251617.160655 2026-01-12 16:00:17 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251617.160834 2026-01-12 16:00:17 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251618.333838 2026-01-12 16:00:18 MainProcess-3062731 ThreadPoolExecutor-0_0-139997260797504 parsl.dataflow.dflow:573 _complete_task INFO: Task 1 completed (launched -> exec_done)
+1768251618.334162 2026-01-12 16:00:18 MainProcess-3062731 ThreadPoolExecutor-0_0-139997260797504 parsl.dataflow.memoization:222 check_memo DEBUG: Task 2 will not be memoized
+1768251618.335796 2026-01-12 16:00:18 MainProcess-3062731 ThreadPoolExecutor-0_0-139997260797504 parsl.dataflow.dflow:748 launch_task INFO: Parsl task 2 try 0 launched on executor default
+1768251618.336032 2026-01-12 16:00:18 MainProcess-3062731 ThreadPoolExecutor-0_0-139997260797504 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard out for task 2 will not be redirected.
+1768251618.336077 2026-01-12 16:00:18 MainProcess-3062731 ThreadPoolExecutor-0_0-139997260797504 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard error for task 2 will not be redirected.
+1768251618.336119 2026-01-12 16:00:18 MainProcess-3062731 ThreadPoolExecutor-0_0-139997260797504 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard out for task 1 will not be redirected.
+1768251618.336243 2026-01-12 16:00:18 MainProcess-3062731 ThreadPoolExecutor-0_0-139997260797504 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard error for task 1 will not be redirected.
+1768251622.478560 2026-01-12 16:00:22 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251622.489225 2026-01-12 16:00:22 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251622.495257 2026-01-12 16:00:22 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251622.500507 2026-01-12 16:00:22 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251627.829670 2026-01-12 16:00:27 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251627.840196 2026-01-12 16:00:27 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251627.850454 2026-01-12 16:00:27 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251627.855670 2026-01-12 16:00:27 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251633.162228 2026-01-12 16:00:33 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251633.172744 2026-01-12 16:00:33 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251633.183010 2026-01-12 16:00:33 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251633.188235 2026-01-12 16:00:33 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251638.474725 2026-01-12 16:00:38 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251638.485303 2026-01-12 16:00:38 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251638.495552 2026-01-12 16:00:38 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251638.500793 2026-01-12 16:00:38 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251638.604816 2026-01-12 16:00:38 MainProcess-3062731 HTEX-Queue-Management-Thread-139997277582912 parsl.executors.high_throughput.zmq_pipes:164 get DEBUG: Received ResultsIncoming message
+1768251638.610089 2026-01-12 16:00:38 MainProcess-3062731 HTEX-Queue-Management-Thread-139997277582912 parsl.executors.high_throughput.zmq_pipes:162 get DEBUG: Waiting for ResultsIncoming message
+1768251643.821112 2026-01-12 16:00:43 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251643.831541 2026-01-12 16:00:43 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251643.841761 2026-01-12 16:00:43 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251643.846957 2026-01-12 16:00:43 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251649.149004 2026-01-12 16:00:49 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251649.159419 2026-01-12 16:00:49 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251649.164959 2026-01-12 16:00:49 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251649.170140 2026-01-12 16:00:49 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251654.471863 2026-01-12 16:00:54 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251654.477838 2026-01-12 16:00:54 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251654.488066 2026-01-12 16:00:54 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251654.493252 2026-01-12 16:00:54 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251659.809464 2026-01-12 16:00:59 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251659.819973 2026-01-12 16:00:59 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251659.830238 2026-01-12 16:00:59 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251659.835477 2026-01-12 16:00:59 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251665.133484 2026-01-12 16:01:05 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251665.144028 2026-01-12 16:01:05 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251665.154286 2026-01-12 16:01:05 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251665.159503 2026-01-12 16:01:05 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251668.606161 2026-01-12 16:01:08 MainProcess-3062731 HTEX-Queue-Management-Thread-139997277582912 parsl.executors.high_throughput.zmq_pipes:164 get DEBUG: Received ResultsIncoming message
+1768251668.608825 2026-01-12 16:01:08 MainProcess-3062731 HTEX-Queue-Management-Thread-139997277582912 parsl.executors.high_throughput.zmq_pipes:162 get DEBUG: Waiting for ResultsIncoming message
+1768251670.471427 2026-01-12 16:01:10 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251670.481924 2026-01-12 16:01:10 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251670.492197 2026-01-12 16:01:10 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251670.497303 2026-01-12 16:01:10 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251675.808534 2026-01-12 16:01:15 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251675.814649 2026-01-12 16:01:15 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251675.824862 2026-01-12 16:01:15 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251675.830053 2026-01-12 16:01:15 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251681.148964 2026-01-12 16:01:21 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251681.159362 2026-01-12 16:01:21 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251681.169588 2026-01-12 16:01:21 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251681.174770 2026-01-12 16:01:21 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251686.409729 2026-01-12 16:01:26 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251686.410156 2026-01-12 16:01:26 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251686.410524 2026-01-12 16:01:26 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251686.410648 2026-01-12 16:01:26 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251688.096177 2026-01-12 16:01:28 MainProcess-3062731 ThreadPoolExecutor-0_1-139997240870464 parsl.dataflow.dflow:573 _complete_task INFO: Task 2 completed (launched -> exec_done)
+1768251688.096478 2026-01-12 16:01:28 MainProcess-3062731 ThreadPoolExecutor-0_1-139997240870464 parsl.dataflow.memoization:222 check_memo DEBUG: Task 3 will not be memoized
+1768251688.096692 2026-01-12 16:01:28 MainProcess-3062731 ThreadPoolExecutor-0_1-139997240870464 parsl.dataflow.dflow:748 launch_task INFO: Parsl task 3 try 0 launched on executor default
+1768251688.097638 2026-01-12 16:01:28 MainProcess-3062731 ThreadPoolExecutor-0_1-139997240870464 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard out for task 3 will not be redirected.
+1768251688.097819 2026-01-12 16:01:28 MainProcess-3062731 ThreadPoolExecutor-0_1-139997240870464 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard error for task 3 will not be redirected.
+1768251688.097863 2026-01-12 16:01:28 MainProcess-3062731 ThreadPoolExecutor-0_1-139997240870464 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard out for task 2 will not be redirected.
+1768251688.097888 2026-01-12 16:01:28 MainProcess-3062731 ThreadPoolExecutor-0_1-139997240870464 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard error for task 2 will not be redirected.
+1768251691.640761 2026-01-12 16:01:31 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251691.641135 2026-01-12 16:01:31 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251691.641557 2026-01-12 16:01:31 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251691.641660 2026-01-12 16:01:31 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251696.872087 2026-01-12 16:01:36 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251696.872448 2026-01-12 16:01:36 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251696.872801 2026-01-12 16:01:36 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251696.872908 2026-01-12 16:01:36 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251698.605549 2026-01-12 16:01:38 MainProcess-3062731 HTEX-Queue-Management-Thread-139997277582912 parsl.executors.high_throughput.zmq_pipes:164 get DEBUG: Received ResultsIncoming message
+1768251698.605780 2026-01-12 16:01:38 MainProcess-3062731 HTEX-Queue-Management-Thread-139997277582912 parsl.executors.high_throughput.zmq_pipes:162 get DEBUG: Waiting for ResultsIncoming message
+1768251702.104979 2026-01-12 16:01:42 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251702.105921 2026-01-12 16:01:42 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251702.106327 2026-01-12 16:01:42 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251702.106443 2026-01-12 16:01:42 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251707.337344 2026-01-12 16:01:47 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251707.337701 2026-01-12 16:01:47 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251707.338111 2026-01-12 16:01:47 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251707.338223 2026-01-12 16:01:47 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251712.568472 2026-01-12 16:01:52 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251712.568826 2026-01-12 16:01:52 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251712.569232 2026-01-12 16:01:52 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251712.569342 2026-01-12 16:01:52 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251717.799840 2026-01-12 16:01:57 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251717.800194 2026-01-12 16:01:57 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251717.800648 2026-01-12 16:01:57 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251717.800757 2026-01-12 16:01:57 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251723.031689 2026-01-12 16:02:03 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251723.032040 2026-01-12 16:02:03 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251723.032518 2026-01-12 16:02:03 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251723.032628 2026-01-12 16:02:03 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251728.263322 2026-01-12 16:02:08 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251728.263676 2026-01-12 16:02:08 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251728.264098 2026-01-12 16:02:08 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251728.264211 2026-01-12 16:02:08 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251728.610248 2026-01-12 16:02:08 MainProcess-3062731 HTEX-Queue-Management-Thread-139997277582912 parsl.executors.high_throughput.zmq_pipes:164 get DEBUG: Received ResultsIncoming message
+1768251728.610465 2026-01-12 16:02:08 MainProcess-3062731 HTEX-Queue-Management-Thread-139997277582912 parsl.executors.high_throughput.zmq_pipes:162 get DEBUG: Waiting for ResultsIncoming message
+1768251733.491166 2026-01-12 16:02:13 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251733.491451 2026-01-12 16:02:13 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251733.491865 2026-01-12 16:02:13 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251733.491955 2026-01-12 16:02:13 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251738.721509 2026-01-12 16:02:18 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251738.721860 2026-01-12 16:02:18 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251738.722249 2026-01-12 16:02:18 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251738.722361 2026-01-12 16:02:18 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251743.952909 2026-01-12 16:02:23 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251743.953269 2026-01-12 16:02:23 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251743.953638 2026-01-12 16:02:23 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251743.953743 2026-01-12 16:02:23 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251749.184225 2026-01-12 16:02:29 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251749.184581 2026-01-12 16:02:29 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251749.184918 2026-01-12 16:02:29 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251749.185024 2026-01-12 16:02:29 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251754.414939 2026-01-12 16:02:34 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251754.415224 2026-01-12 16:02:34 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251754.415556 2026-01-12 16:02:34 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251754.415648 2026-01-12 16:02:34 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251758.614096 2026-01-12 16:02:38 MainProcess-3062731 HTEX-Queue-Management-Thread-139997277582912 parsl.executors.high_throughput.zmq_pipes:164 get DEBUG: Received ResultsIncoming message
+1768251758.614293 2026-01-12 16:02:38 MainProcess-3062731 HTEX-Queue-Management-Thread-139997277582912 parsl.executors.high_throughput.zmq_pipes:162 get DEBUG: Waiting for ResultsIncoming message
+1768251759.643945 2026-01-12 16:02:39 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251759.644306 2026-01-12 16:02:39 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251759.644659 2026-01-12 16:02:39 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251759.644772 2026-01-12 16:02:39 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251764.893356 2026-01-12 16:02:44 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251764.893638 2026-01-12 16:02:44 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251764.893965 2026-01-12 16:02:44 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251764.894054 2026-01-12 16:02:44 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251770.125544 2026-01-12 16:02:50 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251770.125892 2026-01-12 16:02:50 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251770.126299 2026-01-12 16:02:50 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251770.126414 2026-01-12 16:02:50 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251775.358719 2026-01-12 16:02:55 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251775.359000 2026-01-12 16:02:55 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251775.359355 2026-01-12 16:02:55 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251775.359454 2026-01-12 16:02:55 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251780.583134 2026-01-12 16:03:00 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251780.583419 2026-01-12 16:03:00 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251780.583843 2026-01-12 16:03:00 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251780.583936 2026-01-12 16:03:00 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251785.811332 2026-01-12 16:03:05 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251785.811688 2026-01-12 16:03:05 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251785.812055 2026-01-12 16:03:05 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251785.812163 2026-01-12 16:03:05 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251788.624141 2026-01-12 16:03:08 MainProcess-3062731 HTEX-Queue-Management-Thread-139997277582912 parsl.executors.high_throughput.zmq_pipes:164 get DEBUG: Received ResultsIncoming message
+1768251788.624356 2026-01-12 16:03:08 MainProcess-3062731 HTEX-Queue-Management-Thread-139997277582912 parsl.executors.high_throughput.zmq_pipes:162 get DEBUG: Waiting for ResultsIncoming message
+1768251791.045324 2026-01-12 16:03:11 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251791.045602 2026-01-12 16:03:11 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251791.045970 2026-01-12 16:03:11 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251791.046061 2026-01-12 16:03:11 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251795.792088 2026-01-12 16:03:15 MainProcess-3062731 ThreadPoolExecutor-0_0-139997260797504 parsl.dataflow.dflow:573 _complete_task INFO: Task 3 completed (launched -> exec_done)
+1768251795.792334 2026-01-12 16:03:15 MainProcess-3062731 ThreadPoolExecutor-0_0-139997260797504 parsl.dataflow.memoization:222 check_memo DEBUG: Task 4 will not be memoized
+1768251795.792522 2026-01-12 16:03:15 MainProcess-3062731 ThreadPoolExecutor-0_0-139997260797504 parsl.dataflow.dflow:748 launch_task INFO: Parsl task 4 try 0 launched on executor default
+1768251795.793318 2026-01-12 16:03:15 MainProcess-3062731 ThreadPoolExecutor-0_0-139997260797504 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard out for task 4 will not be redirected.
+1768251795.793484 2026-01-12 16:03:15 MainProcess-3062731 ThreadPoolExecutor-0_0-139997260797504 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard error for task 4 will not be redirected.
+1768251795.794190 2026-01-12 16:03:15 MainProcess-3062731 ThreadPoolExecutor-0_0-139997260797504 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard out for task 3 will not be redirected.
+1768251795.794535 2026-01-12 16:03:15 MainProcess-3062731 ThreadPoolExecutor-0_0-139997260797504 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard error for task 3 will not be redirected.
+1768251796.407411 2026-01-12 16:03:16 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251796.416610 2026-01-12 16:03:16 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251796.425780 2026-01-12 16:03:16 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251796.426034 2026-01-12 16:03:16 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251798.809945 2026-01-12 16:03:18 MainProcess-3062731 ThreadPoolExecutor-0_1-139997240870464 parsl.dataflow.dflow:573 _complete_task INFO: Task 4 completed (launched -> exec_done)
+1768251798.810273 2026-01-12 16:03:18 MainProcess-3062731 ThreadPoolExecutor-0_1-139997240870464 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard out for task 4 will not be redirected.
+1768251798.810780 2026-01-12 16:03:18 MainProcess-3062731 ThreadPoolExecutor-0_1-139997240870464 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard error for task 4 will not be redirected.
+1768251801.660397 2026-01-12 16:03:21 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251801.660876 2026-01-12 16:03:21 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251801.661330 2026-01-12 16:03:21 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251801.661443 2026-01-12 16:03:21 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251806.898506 2026-01-12 16:03:26 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251806.898877 2026-01-12 16:03:26 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251806.899544 2026-01-12 16:03:26 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251806.899847 2026-01-12 16:03:26 MainProcess-3062731 JobStatusPoller-Timer-Thread-139997378261920-139996593395264 parsl.jobs.strategy:160 _strategy_init_only DEBUG: strategy_init_only: doing nothing
+1768251806.906974 2026-01-12 16:03:26 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:971 submit DEBUG: Task 5 will be sent to executor default
+1768251806.907301 2026-01-12 16:03:26 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:786 _add_output_deps DEBUG: Adding output dependencies
+1768251806.907360 2026-01-12 16:03:26 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1053 submit INFO: Task 5 submitted for App _create_future, not waiting on any dependency
+1768251806.907429 2026-01-12 16:03:26 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1059 submit DEBUG: Task 5 set to pending state with AppFuture: <AppFuture at 0x7f53a5199040 state=pending>
+1768251806.907487 2026-01-12 16:03:26 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.memoization:222 check_memo DEBUG: Task 5 will not be memoized
+1768251806.907599 2026-01-12 16:03:26 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:748 launch_task INFO: Parsl task 5 try 0 launched on executor default
+1768251806.907637 2026-01-12 16:03:26 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard out for task 5 will not be redirected.
+1768251806.907802 2026-01-12 16:03:26 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard error for task 5 will not be redirected.
+1768251806.907877 2026-01-12 16:03:26 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:573 _complete_task INFO: Task 5 completed (launched -> exec_done)
+1768251806.907934 2026-01-12 16:03:26 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard out for task 5 will not be redirected.
+1768251806.907959 2026-01-12 16:03:26 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard error for task 5 will not be redirected.
+1768251806.908032 2026-01-12 16:03:26 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:456 handle_join_update DEBUG: Join callback for task 0, inner_app_future <AppFuture at 0x7f53a5199040 state=finished returned Results>
+1768251806.908067 2026-01-12 16:03:26 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:573 _complete_task INFO: Task 0 completed (joining -> exec_done)
+1768251806.908114 2026-01-12 16:03:26 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard out for task 0 will not be redirected.
+1768251806.908138 2026-01-12 16:03:26 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard error for task 0 will not be redirected.
+1768251806.908357 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1203 cleanup INFO: DFK cleanup initiated
+1768251806.908450 2026-01-12 16:03:26 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard out for task 0 will not be redirected.
+1768251806.908631 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1097 log_task_states INFO: Summary of tasks in DFK:
+1768251806.908716 2026-01-12 16:03:26 MainProcess-3062731 ThreadPoolExecutor-1_0-139997269190208 parsl.dataflow.dflow:1402 log_std_stream INFO: Standard error for task 0 will not be redirected.
+1768251806.908854 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.unsched: 0
+1768251806.909010 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.pending: 0
+1768251806.909051 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.running: 0
+1768251806.909078 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.exec_done: 6
+1768251806.909105 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.failed: 0
+1768251806.909128 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.dep_fail: 0
+1768251806.909159 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.launched: 0
+1768251806.909183 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.fail_retryable: 0
+1768251806.909212 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.memo_done: 0
+1768251806.909237 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.joining: 0
+1768251806.909259 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.running_ended: 0
+1768251806.909281 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1103 log_task_states INFO: End of summary
+1768251806.909431 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1227 cleanup INFO: Closing job status poller
+1768251806.909584 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.jobs.job_status_poller:48 close INFO: Scaling in executor htex
+1768251806.909636 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.executor:709 scale_in DEBUG: Scale in called, blocks=1
+1768251806.910553 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251806.910656 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251806.910909 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251806.910955 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.executor:743 scale_in DEBUG: Scale in selecting from 1 blocks
+1768251806.910988 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251806.911020 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251806.911116 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251806.911142 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.executor:626 _hold_block DEBUG: Sending hold to manager: 08a0f0806586
+1768251806.911169 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1768251806.911201 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1768251806.911747 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1768251806.911773 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.executor:589 hold_worker DEBUG: Sent hold request to manager: 08a0f0806586
+1768251806.911811 2026-01-12 16:03:26 MainProcess-3062731 MainThread-140014906709824 parsl.providers.local.local:269 cancel DEBUG: Terminating job/process ID: 3063263
+1768251807.146645 2026-01-12 16:03:27 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1229 cleanup INFO: Terminated job status poller
+1768251807.146885 2026-01-12 16:03:27 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1231 cleanup INFO: Shutting down executors
+1768251807.146934 2026-01-12 16:03:27 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1234 cleanup INFO: Shutting down executor default
+1768251807.146993 2026-01-12 16:03:27 MainProcess-3062731 MainThread-140014906709824 parsl.executors.threads:74 shutdown DEBUG: Shutting down executor, which involves waiting for running tasks to complete
+1768251807.147316 2026-01-12 16:03:27 MainProcess-3062731 MainThread-140014906709824 parsl.executors.threads:76 shutdown DEBUG: Done with executor shutdown
+1768251807.147520 2026-01-12 16:03:27 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1236 cleanup INFO: Shut down executor default
+1768251807.147589 2026-01-12 16:03:27 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1234 cleanup INFO: Shutting down executor htex
+1768251807.147649 2026-01-12 16:03:27 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.executor:813 shutdown INFO: Attempting HighThroughputExecutor shutdown
+1768251807.575927 2026-01-12 16:03:27 MainProcess-3062731 MainThread-140014906709824 parsl.executors.high_throughput.executor:821 shutdown INFO: Finished HighThroughputExecutor shutdown attempt
+1768251807.576108 2026-01-12 16:03:27 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1236 cleanup INFO: Shut down executor htex
+1768251807.576146 2026-01-12 16:03:27 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1234 cleanup INFO: Shutting down executor _parsl_internal
+1768251807.576176 2026-01-12 16:03:27 MainProcess-3062731 MainThread-140014906709824 parsl.executors.threads:74 shutdown DEBUG: Shutting down executor, which involves waiting for running tasks to complete
+1768251807.576364 2026-01-12 16:03:27 MainProcess-3062731 MainThread-140014906709824 parsl.executors.threads:76 shutdown DEBUG: Done with executor shutdown
+1768251807.576399 2026-01-12 16:03:27 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1236 cleanup INFO: Shut down executor _parsl_internal
+1768251807.576424 2026-01-12 16:03:27 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1238 cleanup INFO: Terminated executors
+1768251807.576462 2026-01-12 16:03:27 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1254 cleanup INFO: DFK cleanup complete
+1768251807.576507 2026-01-12 16:03:27 MainProcess-3062731 MainThread-140014906709824 parsl.process_loggers:28 wrapped DEBUG: Normal ending for cleanup on thread MainThread
+1768251808.083859 2026-01-12 16:03:28 MainProcess-3062731 MainThread-140014906709824 parsl.dataflow.dflow:1168 atexit_cleanup INFO: python process is exiting, but DFK has already been cleaned up

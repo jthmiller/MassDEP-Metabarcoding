@@ -1,0 +1,136 @@
+1764695242.703562 2025-12-02 12:07:22 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:91 __init__ INFO: Starting DataFlowKernel with config
+Config(
+    app_cache=True, 
+    checkpoint_files=None, 
+    checkpoint_mode=None, 
+    checkpoint_period=None, 
+    executors=(ThreadPoolExecutor(
+        label='default', 
+        max_threads=255, 
+        storage_access=None, 
+        thread_name_prefix='', 
+        working_dir=None
+    ), HighThroughputExecutor(
+        address=None, 
+        address_probe_timeout=None, 
+        available_accelerators=[], 
+        block_error_handler=<function simple_error_handler at 0x7f8e2f01d8b0>, 
+        cores_per_worker=1.0, 
+        cpu_affinity='none', 
+        drain_period=None, 
+        enable_mpi_mode=False, 
+        encrypted=False, 
+        heartbeat_period=30, 
+        heartbeat_threshold=120, 
+        interchange_port_range=(55000, 56000), 
+        label='htex', 
+        launch_cmd='process_worker_pool.py {debug} {max_workers_per_node} -a {addresses} -p {prefetch_capacity} -c {cores_per_worker} -m {mem_per_worker} --poll {poll_period} --task_port={task_port} --result_port={result_port} --cert_dir {cert_dir} --logdir={logdir} --block_id={{block_id}} --hb_period={heartbeat_period} {address_probe_timeout_string} --hb_threshold={heartbeat_threshold} --drain_period={drain_period} --cpu-affinity {cpu_affinity} {enable_mpi_mode} --mpi-launcher={mpi_launcher} --available-accelerators {accelerators}', 
+        max_workers=255, 
+        max_workers_per_node=255, 
+        mem_per_worker=None, 
+        mpi_launcher='mpiexec', 
+        poll_period=10, 
+        prefetch_capacity=0, 
+        provider=LocalProvider(
+            channel=LocalChannel(envs={}, script_dir=None, userhome='/home/users/jtm1171/algae'), 
+            cmd_timeout=30, 
+            init_blocks=1, 
+            launcher=SingleNodeLauncher(debug=True, fail_on_any=False), 
+            max_blocks=1, 
+            min_blocks=0, 
+            move_files=None, 
+            nodes_per_block=1, 
+            parallelism=1, 
+            worker_init=''
+        ), 
+        storage_access=None, 
+        worker_debug=False, 
+        worker_logdir_root=None, 
+        worker_port_range=(54000, 55000), 
+        worker_ports=None, 
+        working_dir=None
+    )), 
+    garbage_collect=True, 
+    initialize_logging=True, 
+    internal_tasks_max_threads=10, 
+    max_idletime=120.0, 
+    monitoring=None, 
+    retries=0, 
+    retry_handler=None, 
+    run_dir='runinfo', 
+    strategy='none', 
+    strategy_period=5, 
+    usage_tracking=False
+)
+1764695242.703779 2025-12-02 12:07:22 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:93 __init__ INFO: Parsl version: 2024.04.15
+1764695242.703910 2025-12-02 12:07:22 MainProcess-1175560 MainThread-140267038562112 parsl.usage_tracking.usage:111 __init__ DEBUG: Tracking status: False
+1764695242.704036 2025-12-02 12:07:22 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:121 __init__ INFO: Run id is: 727b2247-3cc1-4181-a24c-bb42a7d911f5
+1764695243.040622 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:128 __init__ DEBUG: Considering candidate for workflow name: /home/users/jtm1171/.conda/envs/qiime2-amplicon-2024.5/lib/python3.9/site-packages/parsl/dataflow/dflow.py
+1764695243.040805 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:128 __init__ DEBUG: Considering candidate for workflow name: /home/users/jtm1171/.conda/envs/qiime2-amplicon-2024.5/lib/python3.9/site-packages/parsl/dataflow/dflow.py
+1764695243.040839 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:128 __init__ DEBUG: Considering candidate for workflow name: /home/users/jtm1171/.conda/envs/qiime2-amplicon-2024.5/lib/python3.9/site-packages/qiime2/sdk/parallel_config.py
+1764695243.040868 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:134 __init__ DEBUG: Using parallel_config.py as workflow name
+1764695243.041069 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.memoization:163 __init__ INFO: App caching initialized
+1764695243.041152 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.jobs.strategy:145 __init__ DEBUG: Scaling strategy: none
+1764695243.045374 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.executors.high_throughput.executor:567 _start_queue_management_thread DEBUG: Starting queue management thread
+1764695243.045837 2025-12-02 12:07:23 MainProcess-1175560 HTEX-Queue-Management-Thread-140249483986496 parsl.executors.high_throughput.executor:456 _queue_management_worker DEBUG: Queue management worker starting
+1764695243.045992 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.executors.high_throughput.executor:571 _start_queue_management_thread DEBUG: Started queue management thread
+1764695243.046086 2025-12-02 12:07:23 MainProcess-1175560 HTEX-Queue-Management-Thread-140249483986496 parsl.executors.high_throughput.zmq_pipes:162 get DEBUG: Waiting for ResultsIncoming message
+1764695243.080541 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.executors.high_throughput.executor:430 start DEBUG: Created management thread: <Thread(HTEX-Queue-Management-Thread, started daemon 140249483986496)>
+1764695243.081013 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.executors.high_throughput.executor:399 initialize_scaling DEBUG: Launch command: process_worker_pool.py  --max_workers_per_node=255 -a 127.0.0.1,132.177.250.79 -p 0 -c 1.0 -m None --poll 10 --task_port=54857 --result_port=54573 --cert_dir None --logdir=/home/users/jtm1171/algae/runinfo/000/htex --block_id={block_id} --hb_period=30  --hb_threshold=120 --drain_period=None --cpu-affinity none  --mpi-launcher=mpiexec --available-accelerators 
+1764695243.081068 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.executors.high_throughput.executor:401 initialize_scaling DEBUG: Starting HighThroughputExecutor with provider:
+LocalProvider(
+    channel=LocalChannel(
+        envs={}, 
+        script_dir='/home/users/jtm1171/algae/runinfo/000/submit_scripts', 
+        userhome='/home/users/jtm1171/algae'
+    ), 
+    cmd_timeout=30, 
+    init_blocks=1, 
+    launcher=SingleNodeLauncher(debug=True, fail_on_any=False), 
+    max_blocks=1, 
+    min_blocks=0, 
+    move_files=None, 
+    nodes_per_block=1, 
+    parallelism=1, 
+    worker_init=''
+)
+1764695243.083026 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.jobs.job_status_poller:40 add_executors DEBUG: Adding executor htex
+1764695243.083878 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1203 cleanup INFO: DFK cleanup initiated
+1764695243.083942 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1097 log_task_states INFO: Summary of tasks in DFK:
+1764695243.084029 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.unsched: 0
+1764695243.084073 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.pending: 0
+1764695243.084110 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.running: 0
+1764695243.084137 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.exec_done: 0
+1764695243.084164 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.failed: 0
+1764695243.084188 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.dep_fail: 0
+1764695243.084210 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.launched: 0
+1764695243.084234 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.fail_retryable: 0
+1764695243.084271 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.memo_done: 0
+1764695243.084296 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.joining: 0
+1764695243.084318 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1101 log_task_states INFO: Tasks in state States.running_ended: 0
+1764695243.084345 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1103 log_task_states INFO: End of summary
+1764695243.084509 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1227 cleanup INFO: Closing job status poller
+1764695243.084716 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.jobs.job_status_poller:48 close INFO: Scaling in executor htex
+1764695243.084803 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.executors.high_throughput.executor:709 scale_in DEBUG: Scale in called, blocks=0
+1764695243.085702 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.executors.high_throughput.zmq_pipes:61 run DEBUG: Sending command client command
+1764695243.085843 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.executors.high_throughput.zmq_pipes:63 run DEBUG: Waiting for command client response
+1764695243.086063 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.executors.high_throughput.zmq_pipes:65 run DEBUG: Received command client response
+1764695243.086107 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.executors.high_throughput.executor:743 scale_in DEBUG: Scale in selecting from 0 blocks
+1764695243.086169 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1229 cleanup INFO: Terminated job status poller
+1764695243.086195 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1231 cleanup INFO: Shutting down executors
+1764695243.086219 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1234 cleanup INFO: Shutting down executor default
+1764695243.086267 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.executors.threads:74 shutdown DEBUG: Shutting down executor, which involves waiting for running tasks to complete
+1764695243.086318 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.executors.threads:76 shutdown DEBUG: Done with executor shutdown
+1764695243.086343 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1236 cleanup INFO: Shut down executor default
+1764695243.086364 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1234 cleanup INFO: Shutting down executor htex
+1764695243.086398 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.executors.high_throughput.executor:813 shutdown INFO: Attempting HighThroughputExecutor shutdown
+1764695243.101825 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.executors.high_throughput.executor:821 shutdown INFO: Finished HighThroughputExecutor shutdown attempt
+1764695243.101890 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1236 cleanup INFO: Shut down executor htex
+1764695243.101915 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1234 cleanup INFO: Shutting down executor _parsl_internal
+1764695243.101941 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.executors.threads:74 shutdown DEBUG: Shutting down executor, which involves waiting for running tasks to complete
+1764695243.101966 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.executors.threads:76 shutdown DEBUG: Done with executor shutdown
+1764695243.101997 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1236 cleanup INFO: Shut down executor _parsl_internal
+1764695243.102018 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1238 cleanup INFO: Terminated executors
+1764695243.102056 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1254 cleanup INFO: DFK cleanup complete
+1764695243.102086 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.process_loggers:28 wrapped DEBUG: Normal ending for cleanup on thread MainThread
+1764695243.118102 2025-12-02 12:07:23 MainProcess-1175560 MainThread-140267038562112 parsl.dataflow.dflow:1168 atexit_cleanup INFO: python process is exiting, but DFK has already been cleaned up

@@ -1,0 +1,11 @@
+2026-01-12 16:00:01.695 interchange:139 HTEX-Interchange(3063018) MainThread __init__ [INFO] Attempting connection to client at 127.0.0.1 on ports: 55248,55763,55712
+2026-01-12 16:00:01.696 interchange:151 HTEX-Interchange(3063018) MainThread __init__ [INFO] Connected to client
+2026-01-12 16:00:01.716 interchange:182 HTEX-Interchange(3063018) MainThread __init__ [INFO] Bound to ports 54798,54572 for incoming worker connections
+2026-01-12 16:00:01.716 interchange:198 HTEX-Interchange(3063018) MainThread __init__ [INFO] Platform info: {'parsl_v': '2024.04.15', 'python_v': '3.9.19', 'os': 'Linux', 'hostname': 'ron.sr.unh.edu', 'dir': '/home/users/jtm1171/algae'}
+2026-01-12 16:00:01.716 interchange:354 HTEX-Interchange(3063018) MainThread start [INFO] Incoming ports bound
+2026-01-12 16:00:01.718 interchange:229 HTEX-Interchange(3063018) Interchange-Task-Puller task_puller [INFO] Starting
+2026-01-12 16:00:08.613 interchange:442 HTEX-Interchange(3063018) MainThread process_task_outgoing_incoming [INFO] Adding manager: b'08a0f0806586' to ready queue
+2026-01-12 16:00:08.614 interchange:451 HTEX-Interchange(3063018) MainThread process_task_outgoing_incoming [INFO] Registration info for manager b'08a0f0806586': {'type': 'registration', 'parsl_v': '2024.04.15', 'python_v': '3.9.19', 'worker_count': 255, 'uid': '08a0f0806586', 'block_id': '0', 'prefetch_capacity': 0, 'max_capacity': 255, 'os': 'Linux', 'hostname': 'ron.sr.unh.edu', 'dir': '/home/users/jtm1171/algae', 'cpu_count': 256, 'total_memory': 3245791363072}
+2026-01-12 16:00:08.614 interchange:469 HTEX-Interchange(3063018) MainThread process_task_outgoing_incoming [INFO] Manager b'08a0f0806586' has compatible Parsl version 2024.04.15
+2026-01-12 16:00:08.614 interchange:470 HTEX-Interchange(3063018) MainThread process_task_outgoing_incoming [INFO] Manager b'08a0f0806586' has compatible Python version 3.9
+2026-01-12 16:03:26.911 interchange:319 HTEX-Interchange(3063018) Interchange-Command _command_server [INFO] Received HOLD_WORKER for b'08a0f0806586'

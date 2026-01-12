@@ -1,0 +1,38 @@
+2026-01-12 16:00:07.141 parsl:881 3063268 MainThread [INFO]  Python version: 3.9.19 | packaged by conda-forge | (main, Mar 20 2024, 12:50:21) 
+[GCC 12.3.0]
+2026-01-12 16:00:07.141 parsl:882 3063268 MainThread [INFO]  Debug logging: False
+2026-01-12 16:00:07.142 parsl:883 3063268 MainThread [INFO]  Certificates dir: None
+2026-01-12 16:00:07.142 parsl:884 3063268 MainThread [INFO]  Log dir: /home/users/jtm1171/algae/runinfo/002/htex
+2026-01-12 16:00:07.142 parsl:885 3063268 MainThread [INFO]  Manager ID: 08a0f0806586
+2026-01-12 16:00:07.142 parsl:886 3063268 MainThread [INFO]  Block ID: 0
+2026-01-12 16:00:07.142 parsl:887 3063268 MainThread [INFO]  cores_per_worker: 1.0
+2026-01-12 16:00:07.142 parsl:888 3063268 MainThread [INFO]  mem_per_worker: None
+2026-01-12 16:00:07.142 parsl:889 3063268 MainThread [INFO]  task_port: 54798
+2026-01-12 16:00:07.142 parsl:890 3063268 MainThread [INFO]  result_port: 54572
+2026-01-12 16:00:07.142 parsl:891 3063268 MainThread [INFO]  addresses: 132.177.250.79,127.0.0.1
+2026-01-12 16:00:07.142 parsl:892 3063268 MainThread [INFO]  max_workers_per_node: 255
+2026-01-12 16:00:07.142 parsl:893 3063268 MainThread [INFO]  poll_period: 10
+2026-01-12 16:00:07.142 parsl:894 3063268 MainThread [INFO]  address_probe_timeout: 30
+2026-01-12 16:00:07.142 parsl:895 3063268 MainThread [INFO]  Prefetch capacity: 0
+2026-01-12 16:00:07.142 parsl:896 3063268 MainThread [INFO]  Heartbeat threshold: 120
+2026-01-12 16:00:07.142 parsl:897 3063268 MainThread [INFO]  Heartbeat period: 30
+2026-01-12 16:00:07.142 parsl:898 3063268 MainThread [INFO]  Drain period: None
+2026-01-12 16:00:07.142 parsl:899 3063268 MainThread [INFO]  CPU affinity: none
+2026-01-12 16:00:07.142 parsl:900 3063268 MainThread [INFO]  Accelerators: 
+2026-01-12 16:00:07.142 parsl:901 3063268 MainThread [INFO]  enable_mpi_mode: False
+2026-01-12 16:00:07.142 parsl:902 3063268 MainThread [INFO]  mpi_launcher: mpiexec
+2026-01-12 16:00:07.142 parsl:148 3063268 MainThread [INFO]  Manager initializing
+2026-01-12 16:00:07.153 parsl.executors.high_throughput.probe:47 3063268 MainThread [INFO]  Connected to interchange on 127.0.0.1
+2026-01-12 16:00:07.153 parsl:157 3063268 MainThread [INFO]  Connection to Interchange successful on 127.0.0.1
+2026-01-12 16:00:07.153 parsl:160 3063268 MainThread [INFO]  Task url : tcp://127.0.0.1:54798
+2026-01-12 16:00:07.153 parsl:161 3063268 MainThread [INFO]  Result url : tcp://127.0.0.1:54572
+2026-01-12 16:00:07.154 parsl:180 3063268 MainThread [INFO]  Manager connected to interchange
+2026-01-12 16:00:07.604 parsl:250 3063268 MainThread [INFO]  Manager will spawn 255 workers
+2026-01-12 16:00:08.596 parsl:301 3063268 Task-Puller [INFO]  starting
+2026-01-12 16:00:08.599 parsl:531 3063268 MainThread [INFO]  Manager threads started
+2026-01-12 16:00:38.599 parsl:413 3063268 Result-Pusher [INFO]  Sending heartbeat via results connection: last_result_beat=1768251608.5979078 heartbeat_period=30 seconds
+2026-01-12 16:01:08.600 parsl:413 3063268 Result-Pusher [INFO]  Sending heartbeat via results connection: last_result_beat=1768251638.5999663 heartbeat_period=30 seconds
+2026-01-12 16:01:38.604 parsl:413 3063268 Result-Pusher [INFO]  Sending heartbeat via results connection: last_result_beat=1768251668.6003623 heartbeat_period=30 seconds
+2026-01-12 16:02:08.609 parsl:413 3063268 Result-Pusher [INFO]  Sending heartbeat via results connection: last_result_beat=1768251698.6047754 heartbeat_period=30 seconds
+2026-01-12 16:02:38.613 parsl:413 3063268 Result-Pusher [INFO]  Sending heartbeat via results connection: last_result_beat=1768251728.6094542 heartbeat_period=30 seconds
+2026-01-12 16:03:08.623 parsl:413 3063268 Result-Pusher [INFO]  Sending heartbeat via results connection: last_result_beat=1768251758.6132703 heartbeat_period=30 seconds

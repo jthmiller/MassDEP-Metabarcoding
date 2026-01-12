@@ -1,0 +1,6 @@
+2025-12-02 12:07:23.076 interchange:139 HTEX-Interchange(1175860) MainThread __init__ [INFO] Attempting connection to client at 127.0.0.1 on ports: 55906,55790,55121
+2025-12-02 12:07:23.077 interchange:151 HTEX-Interchange(1175860) MainThread __init__ [INFO] Connected to client
+2025-12-02 12:07:23.078 interchange:182 HTEX-Interchange(1175860) MainThread __init__ [INFO] Bound to ports 54857,54573 for incoming worker connections
+2025-12-02 12:07:23.078 interchange:198 HTEX-Interchange(1175860) MainThread __init__ [INFO] Platform info: {'parsl_v': '2024.04.15', 'python_v': '3.9.19', 'os': 'Linux', 'hostname': 'ron.sr.unh.edu', 'dir': '/home/users/jtm1171/algae'}
+2025-12-02 12:07:23.078 interchange:354 HTEX-Interchange(1175860) MainThread start [INFO] Incoming ports bound
+2025-12-02 12:07:23.080 interchange:229 HTEX-Interchange(1175860) Interchange-Task-Puller task_puller [INFO] Starting

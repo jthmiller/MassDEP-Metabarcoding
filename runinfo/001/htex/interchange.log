@@ -1,0 +1,11 @@
+2025-12-02 12:08:36.513 interchange:139 HTEX-Interchange(1177297) MainThread __init__ [INFO] Attempting connection to client at 127.0.0.1 on ports: 55031,55997,55843
+2025-12-02 12:08:36.514 interchange:151 HTEX-Interchange(1177297) MainThread __init__ [INFO] Connected to client
+2025-12-02 12:08:36.515 interchange:182 HTEX-Interchange(1177297) MainThread __init__ [INFO] Bound to ports 54812,54146 for incoming worker connections
+2025-12-02 12:08:36.515 interchange:198 HTEX-Interchange(1177297) MainThread __init__ [INFO] Platform info: {'parsl_v': '2024.04.15', 'python_v': '3.9.19', 'os': 'Linux', 'hostname': 'ron.sr.unh.edu', 'dir': '/home/users/jtm1171/algae'}
+2025-12-02 12:08:36.515 interchange:354 HTEX-Interchange(1177297) MainThread start [INFO] Incoming ports bound
+2025-12-02 12:08:36.517 interchange:229 HTEX-Interchange(1177297) Interchange-Task-Puller task_puller [INFO] Starting
+2025-12-02 12:08:43.381 interchange:442 HTEX-Interchange(1177297) MainThread process_task_outgoing_incoming [INFO] Adding manager: b'e83909660afa' to ready queue
+2025-12-02 12:08:43.381 interchange:451 HTEX-Interchange(1177297) MainThread process_task_outgoing_incoming [INFO] Registration info for manager b'e83909660afa': {'type': 'registration', 'parsl_v': '2024.04.15', 'python_v': '3.9.19', 'worker_count': 255, 'uid': 'e83909660afa', 'block_id': '0', 'prefetch_capacity': 0, 'max_capacity': 255, 'os': 'Linux', 'hostname': 'ron.sr.unh.edu', 'dir': '/home/users/jtm1171/algae', 'cpu_count': 256, 'total_memory': 3245791387648}
+2025-12-02 12:08:43.381 interchange:469 HTEX-Interchange(1177297) MainThread process_task_outgoing_incoming [INFO] Manager b'e83909660afa' has compatible Parsl version 2024.04.15
+2025-12-02 12:08:43.381 interchange:470 HTEX-Interchange(1177297) MainThread process_task_outgoing_incoming [INFO] Manager b'e83909660afa' has compatible Python version 3.9
+2025-12-02 12:09:22.648 interchange:319 HTEX-Interchange(1177297) Interchange-Command _command_server [INFO] Received HOLD_WORKER for b'e83909660afa'
