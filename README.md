@@ -10,3 +10,10 @@
 - denoise with qiime2::dada2
 
 2. 
+
+
+
+## TITAN Analysis 
+See Smucker et al 
+
+## Plots
