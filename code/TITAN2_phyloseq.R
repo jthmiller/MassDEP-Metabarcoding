@@ -5,8 +5,26 @@ TITAN2_phyloseq.R
 # TITAN2 analysis of phyloseq object
 # Threshold Indicator Taxa ANalysis for identifying indicator taxa associated with environmental gradients
 
-library(phyloseq)
-library(TITAN2)
+require(phyloseq)
+require(TITAN2)
+
+require(tidyverse)
+require(qiime2R)
+require(taxize)
+require(phyloseq)
+require(microbiome)
+require(microbiomeutilities)
+require(rJava)
+require(xlsx)
+require(speedyseq)
+require(openxlsx)
+require(rBLAST)
+require(RFLPtools)
+require(Biostrings)
+library(doParallel)
+
+
+
 library(ggplot2)
 library(dplyr)
 library(tidyr)
@@ -21,7 +39,7 @@ library(viridis)
 library(patchwork)
 library(data.table)
 library(foreach)
-library(doParallel)
+
 library(parallel)
 library(tidymodels)
 library(broom)
@@ -39,22 +57,54 @@ set.seed(12345)
 # ============================================================================
 # 1. LOAD AND PREPARE DATA
 # ============================================================================
+options <- c(
+  'results/filtered_MassDEP_2022-2025_rbcl_table.qza',
+  'results/MA_rbcl_2022-2025_hybrid-taxonomy_all.qza',
+  'results/MassDEP_2022-2025_rep-seqs.qza',
+  'results/MA_rbcl',
+  'metadata/qiime_MassDEP_2022-2025-renamed.tsv',
+  'results/MassDEP_2022-2025_rooted-tree.qza',
+  'refdbs/diat_barcode_v10_263bp-tax.qza',
+  'results/default_MA_rbcl_vsearch.qza'
+  )
 
-# Load phyloseq object
-ps <- readRDS("data/phyloseq_objects/MassDEP_2022_2025_phyloseq_object.rds")
-ps
+##physeq <- qza_to_phyloseq(
+##  features = options[1], 
+##  taxonomy = options[2],
+##  tree = options[6],
+##  metadata = options[5]
+##  )
 
-# Filter to only samples with environmental data
-sample_data(ps) <- sample_data(ps) %>%
-    filter(!is.na(Nitrate_mgL) & !is.na(Phosphate_mgL) & 
-           !is.na(Silicate_mgL) & !is.na(Chlorophyll_ugL))
+### taxon free 
+physeq <- qza_to_phyloseq(
+  features = options[1], 
+  tree = options[6],
+  metadata = options[5]
+  )
 
+## Agglomerate to OTU level
+tree_otus <- tree_glom(physeq, 0.03)
+tree_otus_default <- tree_glom(physeq, 0.05)
+## tip_glom()
+
+reps <- read_qza(options[3])$data
+## cubar::seq_to_codons(as.character(reps[1]))
+
+ps <- tree_otus
+
+### Filter to only samples with environmental data
+##sample_data(ps) <- sample_data(ps) %>%
+##    filter(!is.na(Nitrate_mgL) & !is.na(Phosphate_mgL) & 
+##           !is.na(Silicate_mgL) & !is.na(Chlorophyll_ugL))
+##
 # Remove samples with zero reads
 ps <- prune_samples(sample_sums(ps) > 0, ps)
 
-# Check the filtered object
-ps
-ps.options()
+# Remove ASV with low reads
+ps <- prune_taxa(taxa_sums(ps) > 100, ps)
+
+# Remove ASV with low frequency. TITAN requires taxa to be present in at least 4 samples
+ps <- prune_taxa(rowSums(otu_table(ps) > 0) >= 4, ps)
 
 # ============================================================================
 # 2. PREPARE DATA FOR TITAN2
@@ -64,13 +114,15 @@ ps.options()
 otu_table_titan <- t(otu_table(ps))
 
 # Extract environmental variable(s) for analysis
-# Using Chlorophyll as primary environmental gradient
-env_var <- sample_data(ps)$Chlorophyll_ugL
+# Using TP/TN as primary environmental gradient
+
+TN <- sample_data(ps)$TN	
+TP <- sample_data(ps)$TP
 
 # Verify data structure
 cat("OTU table dimensions:", dim(otu_table_titan), "\n")
-cat("Environmental variable length:", length(env_var), "\n")
-cat("Environmental variable range:", range(env_var, na.rm = TRUE), "\n")
+cat("Environmental variable length:", length(TN), "\n")
+cat("Environmental variable range:", range(TN, na.rm = TRUE), "\n")
 
 # ============================================================================
 # 3. RUN TITAN2 ANALYSIS
@@ -79,7 +131,8 @@ cat("Environmental variable range:", range(env_var, na.rm = TRUE), "\n")
 cat("Running TITAN2 analysis...\n")
 
 # Run TITAN2 with parallel processing for faster computation
-n_cores <- detectCores() - 1
+# n_cores <- detectCores() - 1
+ n_cores <- 12
 registerDoParallel(cores = n_cores)
 
 # Set up cluster for TITAN2
@@ -87,17 +140,25 @@ cl <- makeCluster(n_cores)
 doParallel::registerDoParallel(cl)
 
 # Run TITAN2 (this may take a few minutes)
-titan_result <- titan(otu_table_titan, 
-                      env_var, 
+titan_result_TN <- titan(txa = otu_table_titan, 
+                      env = TN, 
                       minSplt = 5,          # Minimum number of taxa occurrences
-                      numPermutation = 500,  # Number of permutations for significance
+                      numPerm = 250,  # Number of permutations for significance
                       boot = TRUE, 
                       nBoot = 500,
                       imax = TRUE,
-                      rel = TRUE,            # Use relative abundance
-                      memory = TRUE,
-                      # TITAN2 progress reporting
-                      output = "full")
+                      memory = TRUE
+                      )
+
+titan_result_TP <- titan(txa = otu_table_titan, 
+                      env = TP, 
+                      minSplt = 5,          # Minimum number of taxa occurrences
+                      numPerm = 250,  # Number of permutations for significance
+                      boot = TRUE, 
+                      nBoot = 500,
+                      imax = TRUE,
+                      memory = TRUE
+                      )                      
 
 stopCluster(cl)
 
