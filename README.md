@@ -1,6 +1,5 @@
 # MassDEP-Metabarcoding
 
-
 ## RBCL Metabarcoding of MA streams 
 
 ## Processing Sequecnces
@@ -11,9 +10,8 @@
 
 2. 
 
-
-
 ## TITAN Analysis 
-See Smucker et al 
+See [Smucker et al.](https://pubmed.ncbi.nlm.nih.gov/32602216/) 
+[TITAN2](https://cran.r-project.org/web/packages/TITAN2/vignettes/titan2-intro.pdf)
 
 ## Plots
