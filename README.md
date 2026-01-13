@@ -2,21 +2,55 @@
 
 ## RBCL Metabarcoding of MA streams 
 
-## Processing Sequecnces
+Goals: 
+1. Identify indicator (low P, high P, low N, or high N) OTUs with TITAN2
+2. 
+3. Future direction: For a new sample, determine if diatom community composition is 
+
+To do:
+1. NMDS on beta diversity
+2. Look into Qiime2's env. prediction
+## SOP (in progress)
+### Processing Sequecnces
 1. code/pipeline.sh
-- remove polyg tails with 
-- match and trim rbcl primer sequences with qiime2::cutadapt
-- denoise with qiime2::dada2
+- Remove poly-g tails with x
+- Match and trim rbcl primer sequences with qiime2::cutadapt
+- Denoise with qiime2::dada2
 
 2. 
+
+
+X.  TITAN for TP and TN gradients with 1,000 bootstraps
 
 ## TITAN Analysis 
 See [Smucker et al.](https://pubmed.ncbi.nlm.nih.gov/32602216/), [Pilgrim et al.](https://pubmed.ncbi.nlm.nih.gov/36213613/)
 Threshold indicator taxa analysis [TITAN2](https://cran.r-project.org/web/packages/TITAN2/vignettes/titan2-intro.pdf)
+
+Notes from Smucker et al. 
 - "OTUs that increased or decreased along TP and TN gradients along with nutrient concentrations at which assemblages had substantial changes in the occurrences and relative abundances of OTUs."
+
+TITAN: 
 - "threshold indicator taxa analysis (TITAN), boosted regression tree analyses, and gradient forest analysis: nonparametric statistical analyses characterized diatom OTU and assemblage relationships with TP and TN concentrations"
 -  "TITAN incorporates relative abundance and occurrence data to quantify multi‐taxa assemblage change, but only handles one predictor variable at a time"
+- "generates a distribution of change points for each OTU and identifies OTUs with consistently large magnitudes of response"
+-  "cross‐OTU comparisons, magnitudes of responses are standardized to z scores."
+- "the maximum sum z score identifies the point at which assemblage change is greatest."
+- "provide information on whether assemblage change has threshold or gradual responses along an environmental gradient"
+
+Boosted regression trees:
+- r::dismo
+- "can handle correlated predictors, interactions, and outliers, do not require data transformations, and can model a variety of responses including smooth, curvilinear, or step functions."
+
+Gradient forest analysis (Ellis et al. 2012):
+- r::gradientForest 
+- "quantifies changes in assemblage composition by combining results from random forest models for each OTU in a data set"
+- Ranked overall importance for 33 environmental predictors
+
+
+
+MV:
 - "NMDS, we used 50 runs of real data and 1,000 randomizations (PC‐ORD v. 5, MjM Software, Gleneden Beach, Oregon, USA)."
+
 ## Plots
 
 
