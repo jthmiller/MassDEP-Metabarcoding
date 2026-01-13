@@ -4,23 +4,21 @@
 
 Goals: 
 1. Identify indicator (low P, high P, low N, or high N) OTUs with TITAN2
-2. 
-3. Future direction: For a new sample, determine if diatom community composition is 
+2. Predict catagorical lable (stress) from community w/[Qiime2](https://docs.qiime2.org/2024.10/tutorials/sample-classifier/)?
+3. Future direction: Predict env var or stress from diatom community composition
 
 To do:
 1. NMDS on beta diversity
 2. Look into Qiime2's env. prediction
+
 ## SOP (in progress)
 ### Processing Sequecnces
 1. code/pipeline.sh
 - Remove poly-g tails with x
 - Match and trim rbcl primer sequences with qiime2::cutadapt
 - Denoise with qiime2::dada2
-
 2. 
-
-
-X.  TITAN for TP and TN gradients with 1,000 bootstraps
+3.  TITAN for TP and TN gradients with 1,000 bootstraps
 
 ## TITAN Analysis 
 See [Smucker et al.](https://pubmed.ncbi.nlm.nih.gov/32602216/), [Pilgrim et al.](https://pubmed.ncbi.nlm.nih.gov/36213613/)
