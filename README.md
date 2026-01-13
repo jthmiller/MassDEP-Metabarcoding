@@ -2,10 +2,12 @@
 
 ## RBCL Metabarcoding of MA streams 
 
-Goals: 
-1. Identify indicator (low P, high P, low N, or high N) OTUs with TITAN2
+### Goals: 
+1. Identify indicator OTUs (low P, high P, low N, or high N) with TITAN2
 2. Predict catagorical lable (stress) from community w/[Qiime2](https://docs.qiime2.org/2024.10/tutorials/sample-classifier/)?
+- Random forest classifier (catagorical data)
 3. Future direction: Predict env var or stress from diatom community composition
+- Perhaps easiest with Qiime2
 
 To do:
 1. NMDS on beta diversity
@@ -44,14 +46,12 @@ Gradient forest analysis (Ellis et al. 2012):
 - "quantifies changes in assemblage composition by combining results from random forest models for each OTU in a data set"
 - Ranked overall importance for 33 environmental predictors
 
-
-
 MV:
 - "NMDS, we used 50 runs of real data and 1,000 randomizations (PC‐ORD v. 5, MjM Software, Gleneden Beach, Oregon, USA)."
 
 ## Plots
 
-
+Updates soon
 
 
 
