@@ -6,12 +6,18 @@
 1. Identify indicator OTUs (low P, high P, low N, or high N) with TITAN2
 2. Predict catagorical lable (stress) from community w/[Qiime2](https://docs.qiime2.org/2024.10/tutorials/sample-classifier/)?
 - Random forest classifier (catagorical data)
+- Stress is based on GIS.
+- Is this a  
 3. Future direction: Predict env var or stress from diatom community composition
 - Perhaps easiest with Qiime2
 
 To do:
 1. NMDS on beta diversity
 2. Look into Qiime2's env. prediction
+3. Use only Diatom OTUs? Yes
+4. [Fieo et al](https://www.sciencedirect.com/science/article/pii/S0048969720314133?ref=pdf_download&fr=RR-9&rr=9bd7266b9dded69c)
+
+TITAN2 https://cran.r-project.org/web/packages/TITAN2/vignettes/titan2-intro.pdf
 
 ## SOP (in progress)
 ### Processing Sequecnces
@@ -51,9 +57,10 @@ MV:
 
 ## Plots
 
-Updates soon
+[TITAN TN Analysis](plots/TITAN2_TN-ridges.png)
 
 
+James Meek MassDEP
 
 ## Notes
 
