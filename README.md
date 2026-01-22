@@ -57,7 +57,7 @@ MV:
 
 ## Plots
 
-[TITAN TN Analysis](plots/TITAN2_TN-ridges.png)
+![TITAN TN Analysis](plots/TITAN2_TN-ridges.png)
 
 
 James Meek MassDEP
